@@ -5,6 +5,7 @@ stages:
   - test
 
 verify_phpunit_path:
+  stage: verify
   before_script:
     - apt-get update && apt-get install -y phpunit
   script:
