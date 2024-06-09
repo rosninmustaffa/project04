@@ -14,7 +14,7 @@ class LoginTest extends TestCase
         $password = 'validPassword1';
 
         // Simulate reading from the credentials file
-        $credentials = file('credentials.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $credentials = file('users.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $valid = false;
 
         foreach ($credentials as $credential) {
@@ -34,7 +34,7 @@ class LoginTest extends TestCase
         $password = 'invalidPassword';
 
         // Simulate reading from the credentials file
-        $credentials = file('credentials.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+        $credentials = file('users.txt', FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
         $valid = false;
 
         foreach ($credentials as $credential) {
