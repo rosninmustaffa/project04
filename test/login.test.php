@@ -4,8 +4,9 @@
 // Include the login.php file to be tested
 require_once 'login.php';
 
+use PHPUnit\Framework\TestCase;
 // Test cases
-class LoginTest extends PHPUnit\Framework\TestCase {
+class LoginTest extends TestCase {
     public function testValidCredentials() {
         // Replace with your actual validation logic
         $this->assertTrue(validateCredentials("validUser1", "validPassword1"));
