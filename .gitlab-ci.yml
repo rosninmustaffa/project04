@@ -17,4 +17,4 @@ test-job:
     - apt-get update && apt-get install -y php-cli php-xml
   script: 
     - php -v
-    - php -d include_path=.:/usr/local/lib/php -d display_errors=On /usr/local/bin/phpunit --bootstrap login.php test/login.test.php
+    - php -d include_path=.:/usr/local/lib/php -d display_errors=On /usr/bin/phpunit --bootstrap login.php test/login.test.php
