@@ -4,7 +4,7 @@ stages:
   - verify
   - test
 
-verify_phpunit_path:
+verify_phpunit_installation-job:
   stage: verify
   before_script:
     - apt-get update && apt-get install -y phpunit
@@ -14,7 +14,8 @@ verify_phpunit_path:
 test-job:
   stage: test
   before_script:
-    - apt-get update && apt-get install -y php-cli php-xml
-  script: 
+    - apt-get update && apt-get install -y phpunit php-cli php-xml
+  script:
+    - /usr/bin/phpunit
     - php -v
     - php -d include_path=.:/usr/local/lib/php -d display_errors=On /usr/bin/phpunit --bootstrap login.php test/login.test.php
