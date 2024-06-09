@@ -15,4 +15,4 @@ test:
     - curl -sS https://getcomposer.org/installer | php
     - php composer.phar install --ignore-platform-req=ext-mbstring
   script:
-    - ./vendor/bin/phpunit tests
+    - ./vendor/bin/phpunit test
