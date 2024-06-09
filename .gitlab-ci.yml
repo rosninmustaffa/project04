@@ -16,6 +16,6 @@ test-job:
   before_script:
     - apt-get update && apt-get install -y phpunit php-cli php-xml
   script:
-    - /usr/bin/phpunit
+    - /usr/bin/phpunit test
     - php -v
     - php -d include_path=.:/usr/local/lib/php -d display_errors=On /usr/bin/phpunit --bootstrap login.php test/login.test.php
