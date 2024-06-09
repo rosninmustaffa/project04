@@ -13,6 +13,6 @@ test:
     - apt-get update
     - apt-get install -y php-cli  php-xml php-mbstring unzip curl
     - curl -sS https://getcomposer.org/installer | php
-    - php composer.phar install --ignore-platform-req=ext-mbstring
+    - php composer.phar install
   script:
     - ./vendor/bin/phpunit --configuration phpunit.xml
