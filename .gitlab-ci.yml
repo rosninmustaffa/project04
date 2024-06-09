@@ -5,7 +5,9 @@ stages:
 
 test:
   stage: test
+  before_script:
+    - apt-get update && apt-get install -y phpunit php-cli php-xml
   script:
-    - apt-get update && apt-get install -y php-cli php-xml
+    - phpunit 
     - php -v
     - php -d include_path=.:/usr/local/lib/php -d display_errors=On /usr/local/bin/phpunit --bootstrap login.php test/login.test.php
