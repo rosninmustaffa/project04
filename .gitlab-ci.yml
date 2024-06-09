@@ -11,7 +11,7 @@ test:
   stage: test
   before_script:
     - apt-get update
-    - apt-get install -y php-cli unzip curl
+    - apt-get install -y php-cli  php-xml unzip curl
     - curl -sS https://getcomposer.org/installer | php
     - php composer.phar install
   script:
